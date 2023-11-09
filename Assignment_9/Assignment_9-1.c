@@ -1,10 +1,11 @@
-#include <ctype.h>
 #include <stdio.h>
+// #include <ctype.h>
 #include <string.h>
 
 int isAllDigit(char *str) {
-  while (*str) {
-    if (!isdigit(*str)) {
+  int i = 0;
+  while (*str != '\0') {
+    if (*str < 48 || *str > 57) {
       return 0;
     }
     str++;
